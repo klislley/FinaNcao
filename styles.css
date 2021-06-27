@@ -1,0 +1,124 @@
+/*-------------------------Global--------------------  */
+:root {
+  --white-color: #e6e6e6;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background:#e0e0e0;
+  color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: min(90vw, 800px);
+  margin: auto;
+}
+
+/*--------------------Title------------------------*/
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--white-color)
+  font-weight: normal;
+}
+
+/*--------------------Header------------------------*/
+header {
+  background: #2c2c2c;
+  padding: 2rem 0 80px;
+  text-align: center;
+}
+#logo {
+  color: #e0e0e0;
+  font-weight: 500;
+  font-family: 'Dela Gothic One', cursive;
+
+
+}
+
+/*--------------------Balance-------------------------*/
+#balance {
+  margin-top: -4em;
+}
+#balance h2 {
+  margin-top: 0;
+}
+
+/*-----------------------Cards-------------------------*/
+.card {
+  background: #777777;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+
+  margin-bottom: 2rem;
+  color: var(--white-color);
+}
+.card h3{
+    font-weight: normal;
+    font-size: 1rem;
+}
+.card p{
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+.card.total{
+    background: #2c2c2c;
+}
+
+/*--------------------Table-------------------------*/
+#data-table{
+    width: 100%;
+    border-spacing: 0 0.4rem;
+}
+table thead th:first-child, 
+table tbody td:first-child{
+border-radius: 0.25rem 0 0 0.25rem;
+}
+table tbody tr{
+    opacity: 0.8;
+}
+table tbody tr:hover {
+    opacity: 1;
+}
+table thead th {
+    color: #2c2c2c;
+    font-weight: 400;
+    background: #c7c7c7 ;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+table tbody td{
+    background:#f7f5f5;
+    color: #2c2c2c;
+    text-align: left;
+    padding: 1rem 2rem;
+    font-weight: normal;
+}
+td.description{
+    color: #2c2c2c;
+}
+td.income{
+    color: rgb(11, 170, 11);
+}
+td.expense{
+    color: red;
+}
+td.date{
+    color: #777777;
+}
+
+#transactions h2{
+    color: #2c2c2c;
+}
+/*--------------------Roda-pé-------------------------*/
+footer {
+  text-align: center;
+
+  padding: 5rem 0 2rem;
+  color: #777777;
+}
