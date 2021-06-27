@@ -1,1 +1,1 @@
-# Desenvolvimento de um sistema de balanço, em html, css e js.
+# Desenvolvimento de um sistema de balanço econômico em html, css e js.
