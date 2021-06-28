@@ -1,124 +1,315 @@
 /*-------------------------Global--------------------  */
+
 :root {
-  --white-color: #e6e6e6;
+    --white-color: #F3F3F3;
+    --white-ice:#e0e0e0;
+    --gray-light: #C7C7C7;
+    --gray:#808080;
+    --gray-dark: #2C2C2C;
+    --red-light: #F03232;
+    --red: #FF0000;
+    --green-light: #32CD32;
+    --green: #008000;
+
 }
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html {
+    font-size:93.75%; /* 15px*/
+}
+
 body {
-  background:#e0e0e0;
-  color: whitesmoke;
-  font-family: "Roboto", sans-serif;
+    background: var(--white-ice);
+    color: var(--white-color);
+
+    font-family: "Roboto", sans-serif;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border-width: 0;
+    clip: rect(0, 0, 0, 0);
+
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .container {
-  width: min(90vw, 800px);
-  margin: auto;
+    width: min(90vw, 800px);
+    margin: auto;
 }
 
 /*--------------------Title------------------------*/
+
 h2 {
-  margin-top: 3.2rem;
-  margin-bottom: 0.8rem;
-  color: var(--white-color)
-  font-weight: normal;
+    color: var(--white-color);
+
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+     
+    font-weight: normal;
+}
+
+/*----------------Button----Links--------------------*/
+a { 
+    color:var(--gray-dark);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--gray);
+}
+
+button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+
+    color: var(--white-color);
+    background:var(--gray-dark);
+
+    padding: 0;
+
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+button:hover{
+    background: var(--gray);
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.button.cancel {
+    color: var(--red-light);
+    border: 2px var(--red-light) solid;
+    border-radius: 0.5rem;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0.5;
+}
+.button.cancel:hover {
+    opacity: 1;
 }
 
 /*--------------------Header------------------------*/
+
 header {
-  background: #2c2c2c;
-  padding: 2rem 0 80px;
-  text-align: center;
+    background: var(--gray-dark);
+    padding: 2rem 0 100px;
+
+    text-align: center;
 }
+
 #logo {
-  color: #e0e0e0;
-  font-weight: 500;
-  font-family: 'Dela Gothic One', cursive;
+    color: var(--white-ice);
 
-
+    font-weight: 500;
+    font-family: 'Dela Gothic One', cursive;
 }
 
 /*--------------------Balance-------------------------*/
+
 #balance {
-  margin-top: -4em;
+    margin-top: -4em;
 }
+
 #balance h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 /*-----------------------Cards-------------------------*/
-.card {
-  background: #777777;
-  padding: 1.5rem 2rem;
-  border-radius: 0.25rem;
 
-  margin-bottom: 2rem;
-  color: var(--white-color);
+.card {
+    background: var(--gray-light);
+    color: var(--white-color);
+
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
 }
-.card h3{
+
+.card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     font-weight: normal;
     font-size: 1rem;
 }
-.card p{
+
+.card p {
     font-size: 2rem;
     line-height: 2rem;
     margin-top: 1rem;
 }
-.card.total{
-    background: #2c2c2c;
+
+.card.total {
+    background: var(--gray-dark);
 }
 
 /*--------------------Table-------------------------*/
-#data-table{
+#transactions {
+    display: block;
+    overflow-x: auto;
+}
+#transactions h2 {
+    color: var(--gray-dark);
+    width: 100%;
+}
+#data-table {
     width: 100%;
     border-spacing: 0 0.4rem;
+
 }
-table thead th:first-child, 
-table tbody td:first-child{
-border-radius: 0.25rem 0 0 0.25rem;
+
+table thead th:first-child, table tbody td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
 }
-table tbody tr{
+
+table thead th:last-child, table tbody td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table tbody tr {
     opacity: 0.8;
 }
+
 table tbody tr:hover {
     opacity: 1;
 }
+
 table thead th {
-    color: #2c2c2c;
+    background: var(--gray-light);
+    color: var(--gray-dark);
+
+    padding: 1rem 2rem;
+
     font-weight: 400;
-    background: #c7c7c7 ;
     text-align: left;
-    padding: 1rem 2rem;
 }
-table tbody td{
-    background:#f7f5f5;
-    color: #2c2c2c;
-    text-align: left;
+
+table tbody td {
+    background: var(--white-color);;
+    color: var(--gray-dark);
+    
     padding: 1rem 2rem;
+    
+    text-align: left;
     font-weight: normal;
 }
-td.description{
-    color: #2c2c2c;
-}
-td.income{
-    color: rgb(11, 170, 11);
-}
-td.expense{
-    color: red;
-}
-td.date{
-    color: #777777;
+
+td.description {
+    color: var(--gray-dark);
 }
 
-#transactions h2{
-    color: #2c2c2c;
+td.income {
+    color: var(--green-light);
+}
+
+td.expense {
+    color: var(--red);
+}
+
+td.date {
+    color: var(--gray);
+}
+
+
+/*--------------------Modal-------------------------*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgb(0,0,0,0.7);
+    
+    position: fixed;
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    background: var(--white-color);
+    padding: 2.5rem;
+    width: 500px;
+    max-width:100%;
+}
+
+/*-----------------------Form-------------------------*/
+#form h2 {
+    color: var(--gray-dark);
+    margin-top: 0;
+}
+#form {
+    color: var(--gray-dark);
+    max-width: 490px;
+}
+input {
+border: none;
+border-radius: 0.5rem;
+
+padding: 0.6rem;
+
+width:100%;
+}
+.input-group {
+    margin-top: 0.5rem;
+}
+.input-group small{
+    opacity: 0.5;
+}
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-group.actions .button, 
+.input-group.actions button {
+    width: 45%;
 }
 /*--------------------Roda-pé-------------------------*/
-footer {
-  text-align: center;
 
-  padding: 5rem 0 2rem;
-  color: #777777;
+footer {
+    text-align: center;
+    
+    padding: 5rem 0 2rem;
+    color: var(--gray);
+    opacity: 0.5;
+}
+
+/*--------------------Responsive-------------------------*/
+@media (min-width: 800px) {
+    html{
+        font-size: 87.5%;
+    }
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  /* or "1fr 1fr 1fr;" */
+        gap: 2rem;
+    }
 }
